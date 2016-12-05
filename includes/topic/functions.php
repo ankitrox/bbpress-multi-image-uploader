@@ -11,6 +11,9 @@ if( !function_exists('bbp_topic_uploader_area') ) :
 
 	function bbp_topic_uploader_area() {
 
+		global $bbp_uploader_scripts_load;
+		$bbp_uploader_scripts_load = true;
+
 		ob_start(); ?>
 
 		<div class="bbp-uploader-msg">

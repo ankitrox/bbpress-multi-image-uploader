@@ -16,7 +16,7 @@ add_action( 'init', 'bbp_uploader_init' );
 /**
  * Add scripts and style
  */
-add_action( 'wp_enqueue_scripts', 'bbp_uploader_wp_enqueue_scripts' );
+add_action( 'wp_footer', 'bbp_uploader_wp_enqueue_scripts', 0 );
 
 /**
  * Once file has been added through uploader, this ajax will be called.

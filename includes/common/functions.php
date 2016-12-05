@@ -69,6 +69,12 @@ if( !function_exists('bbp_uploader_wp_enqueue_scripts') ) :
 
 	function bbp_uploader_wp_enqueue_scripts() {
 
+		global $bbp_uploader_scripts_load;
+
+		if( !isset($bbp_uploader_scripts_load) ) {
+			return;
+		}
+
 		wp_enqueue_script('plupload'); // plupload library
 		wp_enqueue_script('thickbox'); // thickbox
 		wp_enqueue_style('thickbox'); // thickbox style
